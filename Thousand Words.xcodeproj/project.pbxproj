@@ -22,6 +22,8 @@
 		112E26001A595159004CCCF6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112E25E41A595159004CCCF6 /* CoreData.framework */; };
 		112E26081A595159004CCCF6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 112E26061A595159004CCCF6 /* InfoPlist.strings */; };
 		112E260A1A595159004CCCF6 /* Thousand_WordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26091A595159004CCCF6 /* Thousand_WordsTests.m */; };
+		112E26141A59675B004CCCF6 /* iPhone_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112E26131A59675B004CCCF6 /* iPhone_Storyboard.storyboard */; };
+		112E26171A5967FB004CCCF6 /* XZZAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26161A5967FB004CCCF6 /* XZZAlbumTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		112E26051A595159004CCCF6 /* Thousand WordsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Thousand WordsTests-Info.plist"; sourceTree = "<group>"; };
 		112E26071A595159004CCCF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		112E26091A595159004CCCF6 /* Thousand_WordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Thousand_WordsTests.m; sourceTree = "<group>"; };
+		112E26131A59675B004CCCF6 /* iPhone_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone_Storyboard.storyboard; sourceTree = "<group>"; };
+		112E26151A5967FB004CCCF6 /* XZZAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZZAlbumTableViewController.h; sourceTree = "<group>"; };
+		112E26161A5967FB004CCCF6 /* XZZAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZZAlbumTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +120,9 @@
 		112E25E61A595159004CCCF6 /* Thousand Words */ = {
 			isa = PBXGroup;
 			children = (
-				112E25EF1A595159004CCCF6 /* XZZAppDelegate.h */,
-				112E25F01A595159004CCCF6 /* XZZAppDelegate.m */,
+				112E26131A59675B004CCCF6 /* iPhone_Storyboard.storyboard */,
+				112E26151A5967FB004CCCF6 /* XZZAlbumTableViewController.h */,
+				112E26161A5967FB004CCCF6 /* XZZAlbumTableViewController.m */,
 				112E25F51A595159004CCCF6 /* Images.xcassets */,
 				112E25F21A595159004CCCF6 /* Thousand_Words.xcdatamodeld */,
 				112E25E71A595159004CCCF6 /* Supporting Files */,
@@ -127,6 +133,8 @@
 		112E25E71A595159004CCCF6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				112E25EF1A595159004CCCF6 /* XZZAppDelegate.h */,
+				112E25F01A595159004CCCF6 /* XZZAppDelegate.m */,
 				112E25E81A595159004CCCF6 /* Thousand Words-Info.plist */,
 				112E25E91A595159004CCCF6 /* InfoPlist.strings */,
 				112E25EC1A595159004CCCF6 /* main.m */,
@@ -231,6 +239,7 @@
 			files = (
 				112E25EB1A595159004CCCF6 /* InfoPlist.strings in Resources */,
 				112E25F61A595159004CCCF6 /* Images.xcassets in Resources */,
+				112E26141A59675B004CCCF6 /* iPhone_Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112E26171A5967FB004CCCF6 /* XZZAlbumTableViewController.m in Sources */,
 				112E25ED1A595159004CCCF6 /* main.m in Sources */,
 				112E25F11A595159004CCCF6 /* XZZAppDelegate.m in Sources */,
 				112E25F41A595159004CCCF6 /* Thousand_Words.xcdatamodeld in Sources */,
