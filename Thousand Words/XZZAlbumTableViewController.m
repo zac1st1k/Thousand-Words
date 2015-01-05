@@ -7,6 +7,7 @@
 //
 
 #import "XZZAlbumTableViewController.h"
+#import "Album.h"
 
 @interface XZZAlbumTableViewController () <UIAlertViewDelegate>
 
@@ -22,11 +23,40 @@
     return _albums;
 }
 
+#pragma mark -IBActions
+
 - (IBAction)addAlbumBarButtom:(UIBarButtonItem *)sender {
     UIAlertView *newAlbumAlertView = [[UIAlertView alloc] initWithTitle:@"Enter New Album Name" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
     [newAlbumAlertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
     [newAlbumAlertView show];
 
+}
+
+#pragma mark - Helper Methods
+
+- (Album *)albumWithName:(NSString *)name
+{
+    id delegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [delegate managedObjectContext];
+    Album *album = [NSEntityDescription insertNewObjectForEntityForName:@"Album" inManagedObjectContext:context];
+    album.name = name;
+    album.date = [NSDate date];
+    NSError *error = nil;
+    if (![context save:&error]) {
+        //we have an error!
+        NSLog(@"%", error);
+    }
+    return album;
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        NSString *alertText = [alertView textFieldAtIndex:0].text;
+        NSLog(@"My new Album is %@", alertText);
+    }
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -53,16 +83,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - UIAlertViewDelegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 1) {
-        NSString *alertText = [alertView textFieldAtIndex:0].text;
-        NSLog(@"My new Album is %@", alertText);
-    }
 }
 
 #pragma mark - Table view data source
