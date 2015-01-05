@@ -28,6 +28,7 @@
 		112E261D1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E261C1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m */; };
 		112E261F1A5ACABF004CCCF6 /* Astronaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 112E261E1A5ACABF004CCCF6 /* Astronaut.jpg */; };
 		112E26251A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26241A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m */; };
+		11A1136B1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A1136A1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		112E261E1A5ACABF004CCCF6 /* Astronaut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Astronaut.jpg; sourceTree = "<group>"; };
 		112E26231A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XZZPhotosCollectionViewController.h; path = ../XZZPhotosCollectionViewController.h; sourceTree = "<group>"; };
 		112E26241A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XZZPhotosCollectionViewController.m; path = ../XZZPhotosCollectionViewController.m; sourceTree = "<group>"; };
+		11A113691A5AD3170050FDCB /* XZZPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XZZPhotoCollectionViewCell.h; path = ../XZZPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		11A1136A1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XZZPhotoCollectionViewCell.m; path = ../XZZPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				112E26131A59675B004CCCF6 /* iPhone_Storyboard.storyboard */,
+				11A113691A5AD3170050FDCB /* XZZPhotoCollectionViewCell.h */,
+				11A1136A1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m */,
 				112E26231A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.h */,
 				112E26241A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m */,
 				112E26151A5967FB004CCCF6 /* XZZAlbumTableViewController.h */,
@@ -281,6 +286,7 @@
 				112E25ED1A595159004CCCF6 /* main.m in Sources */,
 				112E26251A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m in Sources */,
 				112E25F11A595159004CCCF6 /* XZZAppDelegate.m in Sources */,
+				11A1136B1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m in Sources */,
 				112E261D1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m in Sources */,
 				112E261A1A596C9C004CCCF6 /* Album.m in Sources */,
 				112E25F41A595159004CCCF6 /* Thousand_Words.xcdatamodeld in Sources */,
@@ -482,6 +488,7 @@
 				112E260F1A595159004CCCF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		112E26101A595159004CCCF6 /* Build configuration list for PBXNativeTarget "Thousand WordsTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +497,7 @@
 				112E26121A595159004CCCF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

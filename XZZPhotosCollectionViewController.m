@@ -7,6 +7,7 @@
 //
 
 #import "XZZPhotosCollectionViewController.h"
+#import "XZZPhotoCollectionViewCell.h"
 
 @interface XZZPhotosCollectionViewController ()
 
@@ -49,8 +50,9 @@
 #pragma mark - UICollectionViewDataSource
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Photo Cell" forIndexPath:indexPath];
+    XZZPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Photo Cell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
+    cell.imageView.image = [UIImage imageNamed:@"Astronaut.jpg"];
     return cell;
 }
 
