@@ -23,7 +23,7 @@
     return _albums;
 }
 
-#pragma mark -IBActions
+#pragma mark - IBActions
 
 - (IBAction)addAlbumBarButtom:(UIBarButtonItem *)sender {
     UIAlertView *newAlbumAlertView = [[UIAlertView alloc] initWithTitle:@"Enter New Album Name" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
@@ -44,7 +44,7 @@
     NSError *error = nil;
     if (![context save:&error]) {
         //we have an error!
-        NSLog(@"%", error);
+        NSLog(@"%@", error);
     }
     return album;
 }
@@ -56,6 +56,11 @@
     if (buttonIndex == 1) {
         NSString *alertText = [alertView textFieldAtIndex:0].text;
         NSLog(@"My new Album is %@", alertText);
+        [self.albums addObject:[self albumWithName:alertText]];
+        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.albums count] - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+//        Album *newAlbum = [self albumWithName:alertText];
+//        [self.albums addObject:newAlbum];
+//        [self.tableView reloadData];
     }
 }
 
@@ -101,16 +106,16 @@
     return [self.albums count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
+    Album *selectedAlbum = self.albums[indexPath.row];
+    cell.textLabel.text = selectedAlbum.name;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
