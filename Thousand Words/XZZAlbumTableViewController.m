@@ -8,7 +8,7 @@
 
 #import "XZZAlbumTableViewController.h"
 
-@interface XZZAlbumTableViewController ()
+@interface XZZAlbumTableViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -20,6 +20,13 @@
         _albums = [[NSMutableArray alloc] init];
     }
     return _albums;
+}
+
+- (IBAction)addAlbumBarButtom:(UIBarButtonItem *)sender {
+    UIAlertView *newAlbumAlertView = [[UIAlertView alloc] initWithTitle:@"Enter New Album Name" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
+    [newAlbumAlertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [newAlbumAlertView show];
+
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -46,6 +53,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        NSString *alertText = [alertView textFieldAtIndex:0].text;
+        NSLog(@"My new Album is %@", alertText);
+    }
 }
 
 #pragma mark - Table view data source

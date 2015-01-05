@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) NSMutableArray *albums;
 
+- (IBAction)addAlbumBarButtom:(UIBarButtonItem *)sender;
+
 @end
