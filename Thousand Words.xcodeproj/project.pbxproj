@@ -26,6 +26,8 @@
 		112E26171A5967FB004CCCF6 /* XZZAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26161A5967FB004CCCF6 /* XZZAlbumTableViewController.m */; };
 		112E261A1A596C9C004CCCF6 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26191A596C9C004CCCF6 /* Album.m */; };
 		112E261D1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E261C1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m */; };
+		112E261F1A5ACABF004CCCF6 /* Astronaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 112E261E1A5ACABF004CCCF6 /* Astronaut.jpg */; };
+		112E26251A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26241A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,9 @@
 		112E26191A596C9C004CCCF6 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		112E261B1A5A8F4B004CCCF6 /* XZZCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZZCoreDataHelper.h; sourceTree = "<group>"; };
 		112E261C1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZZCoreDataHelper.m; sourceTree = "<group>"; };
+		112E261E1A5ACABF004CCCF6 /* Astronaut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Astronaut.jpg; sourceTree = "<group>"; };
+		112E26231A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XZZPhotosCollectionViewController.h; path = ../XZZPhotosCollectionViewController.h; sourceTree = "<group>"; };
+		112E26241A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XZZPhotosCollectionViewController.m; path = ../XZZPhotosCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				112E26131A59675B004CCCF6 /* iPhone_Storyboard.storyboard */,
+				112E26231A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.h */,
+				112E26241A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m */,
 				112E26151A5967FB004CCCF6 /* XZZAlbumTableViewController.h */,
 				112E26161A5967FB004CCCF6 /* XZZAlbumTableViewController.m */,
 				112E261B1A5A8F4B004CCCF6 /* XZZCoreDataHelper.h */,
@@ -143,6 +150,7 @@
 		112E25E71A595159004CCCF6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				112E261E1A5ACABF004CCCF6 /* Astronaut.jpg */,
 				112E25EF1A595159004CCCF6 /* XZZAppDelegate.h */,
 				112E25F01A595159004CCCF6 /* XZZAppDelegate.m */,
 				112E25E81A595159004CCCF6 /* Thousand Words-Info.plist */,
@@ -247,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112E261F1A5ACABF004CCCF6 /* Astronaut.jpg in Resources */,
 				112E25EB1A595159004CCCF6 /* InfoPlist.strings in Resources */,
 				112E25F61A595159004CCCF6 /* Images.xcassets in Resources */,
 				112E26141A59675B004CCCF6 /* iPhone_Storyboard.storyboard in Resources */,
@@ -270,6 +279,7 @@
 			files = (
 				112E26171A5967FB004CCCF6 /* XZZAlbumTableViewController.m in Sources */,
 				112E25ED1A595159004CCCF6 /* main.m in Sources */,
+				112E26251A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m in Sources */,
 				112E25F11A595159004CCCF6 /* XZZAppDelegate.m in Sources */,
 				112E261D1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m in Sources */,
 				112E261A1A596C9C004CCCF6 /* Album.m in Sources */,
