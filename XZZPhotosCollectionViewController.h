@@ -10,4 +10,6 @@
 
 @interface XZZPhotosCollectionViewController : UICollectionViewController
 
+- (IBAction)cameraBarButtonPressed:(UIBarButtonItem *)sender;
+
 @end

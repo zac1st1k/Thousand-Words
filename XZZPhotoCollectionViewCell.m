@@ -7,7 +7,7 @@
 //
 
 #import "XZZPhotoCollectionViewCell.h"
-#define IMAGEVIEW_BORDER_LENGTH 5
+#define IMAGEVIEW_BORDER_LENGTH 1
 
 @implementation XZZPhotoCollectionViewCell
 

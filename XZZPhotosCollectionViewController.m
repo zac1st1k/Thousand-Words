@@ -9,7 +9,7 @@
 #import "XZZPhotosCollectionViewController.h"
 #import "XZZPhotoCollectionViewCell.h"
 
-@interface XZZPhotosCollectionViewController ()
+@interface XZZPhotosCollectionViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end
 
@@ -36,6 +36,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - IBAction
+
+- (IBAction)cameraBarButtonPressed:(UIBarButtonItem *)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]){
+        picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    }
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -51,19 +65,19 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     XZZPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Photo Cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor grayColor];
     cell.imageView.image = [UIImage imageNamed:@"Astronaut.jpg"];
     return cell;
 }
 
-//- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-//{
-//    
-//}
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 5;
+    return 4;
 }
 
 @end
