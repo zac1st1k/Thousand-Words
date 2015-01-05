@@ -25,6 +25,7 @@
 		112E26141A59675B004CCCF6 /* iPhone_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112E26131A59675B004CCCF6 /* iPhone_Storyboard.storyboard */; };
 		112E26171A5967FB004CCCF6 /* XZZAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26161A5967FB004CCCF6 /* XZZAlbumTableViewController.m */; };
 		112E261A1A596C9C004CCCF6 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26191A596C9C004CCCF6 /* Album.m */; };
+		112E261D1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E261C1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		112E26161A5967FB004CCCF6 /* XZZAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZZAlbumTableViewController.m; sourceTree = "<group>"; };
 		112E26181A596C9C004CCCF6 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		112E26191A596C9C004CCCF6 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		112E261B1A5A8F4B004CCCF6 /* XZZCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZZCoreDataHelper.h; sourceTree = "<group>"; };
+		112E261C1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZZCoreDataHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				112E26131A59675B004CCCF6 /* iPhone_Storyboard.storyboard */,
 				112E26151A5967FB004CCCF6 /* XZZAlbumTableViewController.h */,
 				112E26161A5967FB004CCCF6 /* XZZAlbumTableViewController.m */,
+				112E261B1A5A8F4B004CCCF6 /* XZZCoreDataHelper.h */,
+				112E261C1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m */,
 				112E26181A596C9C004CCCF6 /* Album.h */,
 				112E26191A596C9C004CCCF6 /* Album.m */,
 				112E25F51A595159004CCCF6 /* Images.xcassets */,
@@ -266,6 +271,7 @@
 				112E26171A5967FB004CCCF6 /* XZZAlbumTableViewController.m in Sources */,
 				112E25ED1A595159004CCCF6 /* main.m in Sources */,
 				112E25F11A595159004CCCF6 /* XZZAppDelegate.m in Sources */,
+				112E261D1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m in Sources */,
 				112E261A1A596C9C004CCCF6 /* Album.m in Sources */,
 				112E25F41A595159004CCCF6 /* Thousand_Words.xcdatamodeld in Sources */,
 			);

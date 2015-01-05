@@ -8,6 +8,7 @@
 
 #import "XZZAlbumTableViewController.h"
 #import "Album.h"
+#import "XZZCoreDataHelper.h"
 
 @interface XZZAlbumTableViewController () <UIAlertViewDelegate>
 
@@ -21,47 +22,6 @@
         _albums = [[NSMutableArray alloc] init];
     }
     return _albums;
-}
-
-#pragma mark - IBActions
-
-- (IBAction)addAlbumBarButtom:(UIBarButtonItem *)sender {
-    UIAlertView *newAlbumAlertView = [[UIAlertView alloc] initWithTitle:@"Enter New Album Name" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
-    [newAlbumAlertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    [newAlbumAlertView show];
-
-}
-
-#pragma mark - Helper Methods
-
-- (Album *)albumWithName:(NSString *)name
-{
-    id delegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [delegate managedObjectContext];
-    Album *album = [NSEntityDescription insertNewObjectForEntityForName:@"Album" inManagedObjectContext:context];
-    album.name = name;
-    album.date = [NSDate date];
-    NSError *error = nil;
-    if (![context save:&error]) {
-        //we have an error!
-        NSLog(@"%@", error);
-    }
-    return album;
-}
-
-#pragma mark - UIAlertViewDelegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 1) {
-        NSString *alertText = [alertView textFieldAtIndex:0].text;
-        NSLog(@"My new Album is %@", alertText);
-        [self.albums addObject:[self albumWithName:alertText]];
-        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.albums count] - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-//        Album *newAlbum = [self albumWithName:alertText];
-//        [self.albums addObject:newAlbum];
-//        [self.tableView reloadData];
-    }
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -84,10 +44,68 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Album"];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES]];
+    
+//    id delegate = [[UIApplication sharedApplication] delegate];
+//    NSManagedObjectContext *context = [delegate managedObjectContext];
+    
+    NSError *error = nil;
+    NSArray *fetchedAlbums = [[XZZCoreDataHelper managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    self.albums = [fetchedAlbums mutableCopy];
+    
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - IBActions
+
+- (IBAction)addAlbumBarButtom:(UIBarButtonItem *)sender {
+    UIAlertView *newAlbumAlertView = [[UIAlertView alloc] initWithTitle:@"Enter New Album Name" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
+    [newAlbumAlertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [newAlbumAlertView show];
+    
+}
+
+#pragma mark - Helper Methods
+
+- (Album *)albumWithName:(NSString *)name
+{
+    //    id delegate = [[UIApplication sharedApplication] delegate];
+    //    NSManagedObjectContext *context = [delegate managedObjectContext];
+    NSManagedObjectContext *context = [XZZCoreDataHelper managedObjectContext];
+    Album *album = [NSEntityDescription insertNewObjectForEntityForName:@"Album" inManagedObjectContext:context];
+    album.name = name;
+    album.date = [NSDate date];
+    NSError *error = nil;
+    if (![context save:&error]) {
+        //we have an error!
+        NSLog(@"%@", error);
+    }
+    return album;
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        NSString *alertText = [alertView textFieldAtIndex:0].text;
+        NSLog(@"My new Album is %@", alertText);
+        [self.albums addObject:[self albumWithName:alertText]];
+        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.albums count] - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationLeft];
+        //        Album *newAlbum = [self albumWithName:alertText];
+        //        [self.albums addObject:newAlbum];
+        //        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - Table view data source
