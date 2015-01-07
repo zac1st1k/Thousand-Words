@@ -59,6 +59,16 @@
 
 - (IBAction)deleteButtonPressed:(UIButton *)sender {
     [[self.photo managedObjectContext] deleteObject:self.photo];
+    NSLog(@"%@ %@", self.photo, [self.photo managedObjectContext]);
+    NSError *error = nil;
+    
+    // debug for simulator
+    [[self.photo managedObjectContext] save:&error];
+    if (error) {
+        NSLog(@"error");
+    }
+    
     [self.navigationController popViewControllerAnimated:YES];
+
 }
 @end
