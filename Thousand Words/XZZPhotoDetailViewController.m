@@ -7,6 +7,7 @@
 //
 
 #import "XZZPhotoDetailViewController.h"
+#import "Photo.h"
 
 @interface XZZPhotoDetailViewController ()
 
@@ -27,6 +28,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    self.imageView.image = self.photo.image;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,6 +56,9 @@
 
 - (IBAction)addFilterButtonPressed:(UIButton *)sender {
 }
+
 - (IBAction)deleteButtonPressed:(UIButton *)sender {
+    [[self.photo managedObjectContext] deleteObject:self.photo];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

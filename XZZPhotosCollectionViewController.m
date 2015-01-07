@@ -11,6 +11,7 @@
 #import "Photo.h"
 #import "XZZPictureDataTransformer.h"
 #import "XZZCoreDataHelper.h"
+#import "XZZPhotoDetailViewController.h"
 
 @interface XZZPhotosCollectionViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -53,6 +54,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Detail Segue"]) {
+        if ([segue.destinationViewController isKindOfClass:[XZZPhotoDetailViewController class]]) {
+            XZZPhotoDetailViewController *targetViewController = segue.destinationViewController;
+            NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] lastObject];
+            Photo *selectedPhoto = self.photos[indexPath.row];
+            targetViewController.photo = selectedPhoto;
+        }
+    }
+}
+
 #pragma mark - IBAction
 
 - (IBAction)cameraBarButtonPressed:(UIBarButtonItem *)sender {
@@ -64,9 +77,9 @@
     else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]){
         picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     }
-//    else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]){
-//        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-//    }
+    //    else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]){
+    //        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    //    }
     [self presentViewController:picker animated:YES completion:nil];
 }
 
@@ -89,15 +102,15 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 #pragma mark - UICollectionViewDataSource
 
@@ -106,8 +119,8 @@
     XZZPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Photo Cell" forIndexPath:indexPath];
     Photo *photo = self.photos[indexPath.row];
     cell.backgroundColor = [UIColor whiteColor];
-//    cell.imageView.image = [UIImage imageNamed:@"Astronaut.jpg"];
-//    cell.imageView.image = self.photos[indexPath.row];
+    //    cell.imageView.image = [UIImage imageNamed:@"Astronaut.jpg"];
+    //    cell.imageView.image = self.photos[indexPath.row];
     cell.imageView.image = photo.image;
     return cell;
 }
@@ -119,7 +132,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-//    return 4;
+    //    return 4;
     return [self.photos count];
 }
 
@@ -132,7 +145,7 @@
     if (!image) {
         image = info[UIImagePickerControllerOriginalImage];
     }
-//    [self.photos addObject:image];
+    //    [self.photos addObject:image];
     [self.photos addObject:[self photoFromImage:image]];
     [self.collectionView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];

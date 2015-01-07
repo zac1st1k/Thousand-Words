@@ -27,7 +27,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="7AZ-ga-B0D" kind="push" id="t9u-kE-RLW"/>
+                                    <segue destination="7AZ-ga-B0D" kind="push" identifier="Detail Segue" id="t9u-kE-RLW"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

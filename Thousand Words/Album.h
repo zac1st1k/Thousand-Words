@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *photos;
+
 @end
 
 @interface Album (CoreDataGeneratedAccessors)
