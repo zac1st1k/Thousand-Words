@@ -29,6 +29,7 @@
 		112E26251A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26241A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m */; };
 		1132C1E71A5D0AFF0025C6ED /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1132C1E61A5D0AFF0025C6ED /* Photo.m */; };
 		1132C1EA1A5D0B000025C6ED /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 1132C1E91A5D0B000025C6ED /* Album.m */; };
+		1132C1EE1A5D0C790025C6ED /* XZZPictureDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1132C1ED1A5D0C790025C6ED /* XZZPictureDataTransformer.m */; };
 		11A1136B1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A1136A1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		1132C1E61A5D0AFF0025C6ED /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		1132C1E81A5D0B000025C6ED /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		1132C1E91A5D0B000025C6ED /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		1132C1EC1A5D0C790025C6ED /* XZZPictureDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XZZPictureDataTransformer.h; path = ../XZZPictureDataTransformer.h; sourceTree = "<group>"; };
+		1132C1ED1A5D0C790025C6ED /* XZZPictureDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XZZPictureDataTransformer.m; path = ../XZZPictureDataTransformer.m; sourceTree = "<group>"; };
 		11A113691A5AD3170050FDCB /* XZZPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XZZPhotoCollectionViewCell.h; path = ../XZZPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		11A1136A1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XZZPhotoCollectionViewCell.m; path = ../XZZPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +196,8 @@
 				1132C1E91A5D0B000025C6ED /* Album.m */,
 				1132C1E51A5D0AFF0025C6ED /* Photo.h */,
 				1132C1E61A5D0AFF0025C6ED /* Photo.m */,
+				1132C1EC1A5D0C790025C6ED /* XZZPictureDataTransformer.h */,
+				1132C1ED1A5D0C790025C6ED /* XZZPictureDataTransformer.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				112E25F11A595159004CCCF6 /* XZZAppDelegate.m in Sources */,
 				11A1136B1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m in Sources */,
 				1132C1EA1A5D0B000025C6ED /* Album.m in Sources */,
+				1132C1EE1A5D0C790025C6ED /* XZZPictureDataTransformer.m in Sources */,
 				112E261D1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m in Sources */,
 				112E25F41A595159004CCCF6 /* Thousand_Words.xcdatamodeld in Sources */,
 			);

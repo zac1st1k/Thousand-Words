@@ -8,6 +8,9 @@
 
 #import "XZZPhotosCollectionViewController.h"
 #import "XZZPhotoCollectionViewCell.h"
+#import "Photo.h"
+#import "XZZPictureDataTransformer.h"
+#import "XZZCoreDataHelper.h"
 
 @interface XZZPhotosCollectionViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -61,6 +64,22 @@
 //        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 //    }
     [self presentViewController:picker animated:YES completion:nil];
+}
+
+#pragma mark - Helper Methods
+
+- (Photo *)photoFromImage:(UIImage *)image
+{
+    Photo *photo = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[XZZCoreDataHelper managedObjectContext]];
+    photo.image = image;
+    photo.date = [NSDate date];
+    photo.albumBook = self.album;
+    NSError *error = nil;
+    if (![[photo managedObjectContext] save:&error]) {
+        //Error in saving
+        NSLog(@"%@", error);
+    }
+    return photo;
 }
 
 /*
