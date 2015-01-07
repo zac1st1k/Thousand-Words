@@ -71,6 +71,8 @@
 - (Photo *)photoFromImage:(UIImage *)image
 {
     Photo *photo = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[XZZCoreDataHelper managedObjectContext]];
+    
+    
     photo.image = image;
     photo.date = [NSDate date];
     photo.albumBook = self.album;
@@ -98,9 +100,11 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     XZZPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Photo Cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor grayColor];
+    Photo *photo = self.photos[indexPath.row];
+    cell.backgroundColor = [UIColor whiteColor];
 //    cell.imageView.image = [UIImage imageNamed:@"Astronaut.jpg"];
-    cell.imageView.image = self.photos[indexPath.row];
+//    cell.imageView.image = self.photos[indexPath.row];
+    cell.imageView.image = photo.image;
     return cell;
 }
 
@@ -124,7 +128,8 @@
     if (!image) {
         image = info[UIImagePickerControllerOriginalImage];
     }
-    [self.photos addObject:image];
+//    [self.photos addObject:image];
+    [self.photos addObject:[self photoFromImage:image]];
     [self.collectionView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

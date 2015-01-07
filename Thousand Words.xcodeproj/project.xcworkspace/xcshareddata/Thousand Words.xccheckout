@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D11CFD9C-F4B6-4D40-839A-68409C920B1B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Thousand Words</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>40B109F2-FA00-457F-AB2D-E7EC2A8531AE</key>
+		<string>https://github.com/zac1st1k/Thousand-Words.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Thousand Words.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>40B109F2-FA00-457F-AB2D-E7EC2A8531AE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zac1st1k/Thousand-Words.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>40B109F2-FA00-457F-AB2D-E7EC2A8531AE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>40B109F2-FA00-457F-AB2D-E7EC2A8531AE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Thousand Words</string>
+		</dict>
+	</array>
+</dict>
+</plist>
