@@ -24,10 +24,11 @@
 		112E260A1A595159004CCCF6 /* Thousand_WordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26091A595159004CCCF6 /* Thousand_WordsTests.m */; };
 		112E26141A59675B004CCCF6 /* iPhone_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112E26131A59675B004CCCF6 /* iPhone_Storyboard.storyboard */; };
 		112E26171A5967FB004CCCF6 /* XZZAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26161A5967FB004CCCF6 /* XZZAlbumTableViewController.m */; };
-		112E261A1A596C9C004CCCF6 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26191A596C9C004CCCF6 /* Album.m */; };
 		112E261D1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E261C1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m */; };
 		112E261F1A5ACABF004CCCF6 /* Astronaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 112E261E1A5ACABF004CCCF6 /* Astronaut.jpg */; };
 		112E26251A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E26241A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m */; };
+		1132C1E71A5D0AFF0025C6ED /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1132C1E61A5D0AFF0025C6ED /* Photo.m */; };
+		1132C1EA1A5D0B000025C6ED /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 1132C1E91A5D0B000025C6ED /* Album.m */; };
 		11A1136B1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A1136A1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -63,13 +64,15 @@
 		112E26131A59675B004CCCF6 /* iPhone_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone_Storyboard.storyboard; sourceTree = "<group>"; };
 		112E26151A5967FB004CCCF6 /* XZZAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZZAlbumTableViewController.h; sourceTree = "<group>"; };
 		112E26161A5967FB004CCCF6 /* XZZAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZZAlbumTableViewController.m; sourceTree = "<group>"; };
-		112E26181A596C9C004CCCF6 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
-		112E26191A596C9C004CCCF6 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		112E261B1A5A8F4B004CCCF6 /* XZZCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZZCoreDataHelper.h; sourceTree = "<group>"; };
 		112E261C1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZZCoreDataHelper.m; sourceTree = "<group>"; };
 		112E261E1A5ACABF004CCCF6 /* Astronaut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Astronaut.jpg; sourceTree = "<group>"; };
 		112E26231A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XZZPhotosCollectionViewController.h; path = ../XZZPhotosCollectionViewController.h; sourceTree = "<group>"; };
 		112E26241A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XZZPhotosCollectionViewController.m; path = ../XZZPhotosCollectionViewController.m; sourceTree = "<group>"; };
+		1132C1E51A5D0AFF0025C6ED /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		1132C1E61A5D0AFF0025C6ED /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		1132C1E81A5D0B000025C6ED /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		1132C1E91A5D0B000025C6ED /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 		11A113691A5AD3170050FDCB /* XZZPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XZZPhotoCollectionViewCell.h; path = ../XZZPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		11A1136A1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XZZPhotoCollectionViewCell.m; path = ../XZZPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,10 +146,8 @@
 				112E26161A5967FB004CCCF6 /* XZZAlbumTableViewController.m */,
 				112E261B1A5A8F4B004CCCF6 /* XZZCoreDataHelper.h */,
 				112E261C1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m */,
-				112E26181A596C9C004CCCF6 /* Album.h */,
-				112E26191A596C9C004CCCF6 /* Album.m */,
 				112E25F51A595159004CCCF6 /* Images.xcassets */,
-				112E25F21A595159004CCCF6 /* Thousand_Words.xcdatamodeld */,
+				1132C1EB1A5D0B2E0025C6ED /* CoreData */,
 				112E25E71A595159004CCCF6 /* Supporting Files */,
 			);
 			path = "Thousand Words";
@@ -182,6 +183,18 @@
 				112E26061A595159004CCCF6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1132C1EB1A5D0B2E0025C6ED /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				112E25F21A595159004CCCF6 /* Thousand_Words.xcdatamodeld */,
+				1132C1E81A5D0B000025C6ED /* Album.h */,
+				1132C1E91A5D0B000025C6ED /* Album.m */,
+				1132C1E51A5D0AFF0025C6ED /* Photo.h */,
+				1132C1E61A5D0AFF0025C6ED /* Photo.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,10 +298,11 @@
 				112E26171A5967FB004CCCF6 /* XZZAlbumTableViewController.m in Sources */,
 				112E25ED1A595159004CCCF6 /* main.m in Sources */,
 				112E26251A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m in Sources */,
+				1132C1E71A5D0AFF0025C6ED /* Photo.m in Sources */,
 				112E25F11A595159004CCCF6 /* XZZAppDelegate.m in Sources */,
 				11A1136B1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m in Sources */,
+				1132C1EA1A5D0B000025C6ED /* Album.m in Sources */,
 				112E261D1A5A8F4B004CCCF6 /* XZZCoreDataHelper.m in Sources */,
-				112E261A1A596C9C004CCCF6 /* Album.m in Sources */,
 				112E25F41A595159004CCCF6 /* Thousand_Words.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
