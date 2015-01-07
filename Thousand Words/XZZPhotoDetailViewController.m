@@ -8,6 +8,7 @@
 
 #import "XZZPhotoDetailViewController.h"
 #import "Photo.h"
+#import "XZZFiltersConllectionViewController.h"
 
 @interface XZZPhotoDetailViewController ()
 
@@ -43,7 +44,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -51,8 +51,13 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"Filters Segue"]) {
+        if ([segue.destinationViewController isKindOfClass:[XZZFiltersConllectionViewController class]]) {
+            XZZFiltersConllectionViewController *targetViewController = segue.destinationViewController;
+            targetViewController.photo = self.photo;
+        }
+    }
 }
-*/
 
 - (IBAction)addFilterButtonPressed:(UIButton *)sender {
 }
