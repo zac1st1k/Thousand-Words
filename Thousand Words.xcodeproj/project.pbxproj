@@ -31,6 +31,7 @@
 		1132C1EA1A5D0B000025C6ED /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 1132C1E91A5D0B000025C6ED /* Album.m */; };
 		1132C1EE1A5D0C790025C6ED /* XZZPictureDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1132C1ED1A5D0C790025C6ED /* XZZPictureDataTransformer.m */; };
 		11A1136B1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A1136A1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m */; };
+		11FA7D541A5D5A68001378F0 /* XZZPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FA7D531A5D5A68001378F0 /* XZZPhotoDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		1132C1ED1A5D0C790025C6ED /* XZZPictureDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XZZPictureDataTransformer.m; path = ../XZZPictureDataTransformer.m; sourceTree = "<group>"; };
 		11A113691A5AD3170050FDCB /* XZZPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XZZPhotoCollectionViewCell.h; path = ../XZZPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		11A1136A1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XZZPhotoCollectionViewCell.m; path = ../XZZPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		11FA7D521A5D5A68001378F0 /* XZZPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZZPhotoDetailViewController.h; sourceTree = "<group>"; };
+		11FA7D531A5D5A68001378F0 /* XZZPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZZPhotoDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				112E26131A59675B004CCCF6 /* iPhone_Storyboard.storyboard */,
+				11FA7D521A5D5A68001378F0 /* XZZPhotoDetailViewController.h */,
+				11FA7D531A5D5A68001378F0 /* XZZPhotoDetailViewController.m */,
 				11A113691A5AD3170050FDCB /* XZZPhotoCollectionViewCell.h */,
 				11A1136A1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m */,
 				112E26231A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.h */,
@@ -304,6 +309,7 @@
 				112E25ED1A595159004CCCF6 /* main.m in Sources */,
 				112E26251A5ACC93004CCCF6 /* XZZPhotosCollectionViewController.m in Sources */,
 				1132C1E71A5D0AFF0025C6ED /* Photo.m in Sources */,
+				11FA7D541A5D5A68001378F0 /* XZZPhotoDetailViewController.m in Sources */,
 				112E25F11A595159004CCCF6 /* XZZAppDelegate.m in Sources */,
 				11A1136B1A5AD3170050FDCB /* XZZPhotoCollectionViewCell.m in Sources */,
 				1132C1EA1A5D0B000025C6ED /* Album.m in Sources */,
