@@ -7,12 +7,24 @@
 //
 
 #import "XZZFiltersConllectionViewController.h"
+#import "XZZPhotoCollectionViewCell.h"
+#import "Photo.h"
 
 @interface XZZFiltersConllectionViewController ()
+
+@property (strong, nonatomic) NSMutableArray *filters;
 
 @end
 
 @implementation XZZFiltersConllectionViewController
+
+- (NSMutableArray *)filters
+{
+    if (!_filters) {
+        _filters = [[NSMutableArray alloc] init];
+    }
+    return _filters;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +45,22 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UICollectionVIewDatasource
+
+- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender
+{
+    XZZPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Photo Cell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor whiteColor];
+    cell.imageView.image = self.photo.image;
+    
+    return cell;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return  [self.filters count];
 }
 
 /*
