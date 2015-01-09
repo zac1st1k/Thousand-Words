@@ -49,9 +49,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.filters = [[[self class] photoFilters] mutableCopy];
-//    for (CIFilter *filter in [[self class] photoFilters]) {
-//        [self.filters addObject:filter];
-//    }
+    //    for (CIFilter *filter in [[self class] photoFilters]) {
+    //        [self.filters addObject:filter];
+    //    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,6 +87,7 @@
     CGRect extent = [filteredImage extent];
     CGImageRef cgImage = [self.context createCGImage:filteredImage fromRect:extent];
     UIImage *finalImage = [UIImage imageWithCGImage:cgImage];
+    //    NSLog(@"Look at all of this data %@", UIImagePNGRepresentation(finalImage));
     return finalImage;
 }
 
@@ -96,7 +97,16 @@
 {
     XZZPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Photo Cell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-    cell.imageView.image = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
+    
+    dispatch_queue_t filterQueue = dispatch_queue_create("filter queue", NULL);
+    dispatch_async(filterQueue, ^{
+        UIImage *filterImage = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.imageView.image = filterImage;
+        });
+    });
+    
+    //    cell.imageView.image = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
     return cell;
 }
 
@@ -106,15 +116,15 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 #pragma mark - UICollectionView Delegate
 
@@ -122,11 +132,13 @@
 {
     XZZPhotoCollectionViewCell *selectedCell = (XZZPhotoCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     self.photo.image = selectedCell.imageView.image;
-    NSError *error = nil;
-    if (![[self.photo managedObjectContext] save:&error]) {
-        NSLog(@"%@", error);
+    if (self.photo.image) {
+        NSError *error = nil;
+        if (![[self.photo managedObjectContext] save:&error]) {
+            NSLog(@"%@", error);
+        }
+        [self.navigationController popViewControllerAnimated:YES];
     }
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
